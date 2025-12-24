@@ -1,0 +1,25 @@
+configuration:
+  EXPORTER_TYPE:
+    name: Exporter type
+    description: You can select one of two ways how to fetch data from your Ecoflow devices: `mqtt` or `rest`.
+  ECOFLOW_EMAIL:
+    name: eMail
+    description: Your email address that you use to log in to the `EcoFlow mobile app. If EXPORTER_TYPE `mqtt`, then this parameter are mandatory.
+  ECOFLOW_PASSWORD:
+    name: Password
+    description: Your EcoFlow password. If EXPORTER_TYPE `mqtt`, then this parameter are mandatory.
+  ECOFLOW_ACCESS_KEY:
+    name: EcoFlow Access Token
+    description: If EXPORTER_TYPE `rest`, then this parameter are mandatory.
+  ECOFLOW_SECRET_KEY:
+    name: EcoFlow Secret Token
+    description: If EXPORTER_TYPE `rest`, then this parameter are mandatory.
+  ECOFLOW_DEVICES:
+    name: EcoFlow devices
+    description: the list of devices serial numbers separated by comma. For instance: `SN1,SN2,SN3`.
+  ECOFLOW_DEVICES_PRETTY_NAMES:
+    name:
+    description: The key/value map like `{"R33XXXXXXXXX":"Delta 2", "R33YYYYY": "Delta Pro"}` of custom names for your devices. Key is a serial number, value is a device name you want to see. It's optional but either `ECOFLOW_DEVICES` or `ECOFLOW_DEVICES_PRETTY_NAMES` should be populated.
+  DEBUG_ENABLED:
+    name: Debug
+    description: Debug messages in the log.
