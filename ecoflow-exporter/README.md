@@ -17,6 +17,16 @@
 
 ![Supports amd64 Architecture][amd64-shield] ![Supports aarch64 Architecture][aarch64-shield] ![Supports armv7 Architecture][armv7-shield] ![Supports armhf Architecture][armhf-shield] ![Supports i386 Architecture][i386-shield]
 
+## Installation
+
+Add the repository URL under **Supervisor → Add-on Store** in your Home Assistant front-end:
+
+    https://github.com/andrewjswan/ecoflow-exporter-addon/
+
+## Confururation settings
+
+Configure the add-on via your Home Assistant front-end under **Supervisor → Dashboard → EcoFlow Exporter**.
+
 > [!NOTE]
 > Builded from https://github.com/tess1o/go-ecoflow-exporter
 
@@ -24,6 +34,9 @@
 > - **Documentation**: https://github.com/tess1o/go-ecoflow-exporter
 > - **Quick Start**: https://github.com/tess1o/go-ecoflow-exporter/blob/main/docs/quickstart.md
 > - **Enviroment variables**: https://github.com/tess1o/go-ecoflow-exporter/blob/main/docker-compose/.env
+
+> [!TIP]
+> **Andrew J.Swan - Home Assistant Add-ons**: https://github.com/andrewjswan/home-assistant-addons
 
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-blue.svg
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-blue.svg

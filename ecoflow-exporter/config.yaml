@@ -1,0 +1,49 @@
+---
+name: EcoFlow Exporter
+version: 2025.12.0
+slug: ecoflow-exporter
+description: EcoFlow metrics exporter
+url: https://github.com/andrewjswan/ecoflow-exporter-addon/
+
+arch:
+  - amd64
+  - aarch64
+
+image: ghcr.io/andrewjswan/ecoflow-exporter-addon-{arch}
+
+startup: application
+boot: auto
+init: false
+ingress: true
+
+map:
+  - all_addon_configs:rw
+  - config:rw
+  - share:rw
+  - ssl:rw
+
+homeassistant: 2024.1.0
+
+panel_icon: mdi:poker-chip
+panel_title: EcoFlow Exporter
+
+ports:
+  2112/tcp: 2112
+
+ports_description:
+  2112/tcp: "Web Interface"
+
+watchdog: "tcp://[HOST]:[PORT:5500]/metrics"
+
+options:
+  EXPORTER_TYPE: "mqtt"
+
+schema:
+  EXPORTER_TYPE: list(mqtt|rest)?
+  ECOFLOW_EMAIL: str?
+  ECOFLOW_PASSWORD: password?
+  ECOFLOW_ACCESS_KEY: str?
+  ECOFLOW_SECRET_KEY: password?
+  ECOFLOW_DEVICES: str?
+  ECOFLOW_DEVICES_PRETTY_NAMES: str?
+  DEBUG_ENABLED: bool?
